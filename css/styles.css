@@ -2,9 +2,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0 0 60px 0;
   text-align: center;
-  padding-bottom: 60px; /* space for fixed footer */
+  min-height: 100vh;
 }
 
 .header {
@@ -28,7 +28,7 @@ body {
   color: black;
   text-decoration: none;
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .navbar a:hover { background: MediumTurquoise; }
@@ -52,7 +52,7 @@ body {
 }
 
 .container img {
-  height: 600px;           /* desktop */
+  height: 600px;
   width: auto;
   object-fit: contain;
   flex: 0 0 auto;
@@ -69,7 +69,7 @@ body {
 }
 .container::-webkit-scrollbar-thumb:hover { background: MediumTurquoise; }
 
-/* Mobile: images fit screen width */
+/* Mobile: images full width */
 @media (max-width: 768px) {
   .container {
     padding: 1rem 0;
@@ -77,10 +77,23 @@ body {
   }
   .container img {
     height: auto;
-    width: 100vw;           /* full screen width */
+    width: 100vw;
     max-width: none;
-    object-fit: cover;      /* or contain if you prefer no crop */
+    object-fit: cover;
   }
+}
+
+/* Contact page – big space + big email */
+p:first-of-type {
+  margin-top: 8rem;
+  font-size: 1rem;
+}
+
+.contact-info {
+  margin: 2rem 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #000;
 }
 
 footer {
@@ -92,3 +105,4 @@ footer {
   padding: 10px 0;
   color: #888;
   font-size: 0.9rem;
+}

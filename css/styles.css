@@ -78,9 +78,10 @@ body {
 .container img {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  height: 100vh;
+  height: 600px;           /* desktop fixed height */
   width: auto;
   flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .container img:hover {
